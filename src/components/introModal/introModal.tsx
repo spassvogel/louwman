@@ -16,12 +16,9 @@ const IntroModal = (props: Props) => {
       onRequestClose={props.onClose}
     >
       <div onClick={props.onClose}>
-        <h1 className="header">Conflict situations</h1>
+        <h1 className="header">Louwman demo</h1>
         <p>
-          Conflicts can appear in every area of the warehouse.
-        </p>
-        <p> 
-          Investigate each situation and choose the correct way to proceed. 
+          Er kan van alles gebeuren in het distributiecentrum. 
         </p>
       </div>
     </ReactModal>  

@@ -1,8 +1,8 @@
 {
-  "name": "conflictresolution",
+  "name": "louwman",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://spassvogel.github.io/conflictresolution",
+  "homepage": "https://spassvogel.github.io/louwman",
   "dependencies": {
     "@inlet/react-pixi": "^1.2.18",
     "@testing-library/jest-dom": "^4.2.4",
@@ -14,6 +14,7 @@
     "@types/react-dom": "^16.9.7",
     "gsap": "^3.2.6",
     "pixi-particles": "^4.2.0",
+    "pixi-sound": "^3.0.4",
     "pixi-viewport": "^4.11.0",
     "pixi.js": "^5.2.3",
     "react": "^16.13.1",
