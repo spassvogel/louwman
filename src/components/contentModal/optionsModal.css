@@ -1,0 +1,47 @@
+.modal .options {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .modal .options li {
+    background: #009FE3;
+    display: block;
+    min-height: 32px;
+    color: white;
+    padding: 8px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .modal .options li .text {
+    flex: 1;
+  }
+  
+  .modal .options li .checkbox {
+    background: white;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  
+  .modal .options li .checkbox .check {
+    display: none;
+    width: 24px;
+    height: 24px;
+    margin: 4px;
+  }
+  
+  .modal .options li.active {
+    background: #3FA535;
+  }
+  
+  .modal .options li.active .checkbox .check {
+    display: inline;
+    stroke-dasharray: 640;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    animation: draw-around 1s;
+  }

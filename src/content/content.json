@@ -1,0 +1,97 @@
+[{
+  "position": [822, 839],
+  "type": "conflict",
+  "header": "The Trouble with Kumar",
+  "content": {
+    "situationImg": "images/conflict/kumar-0.svg",
+    "situationBalloonClass": "balloon-44",
+    "description": "After establishing the complaint to be true and giving Kumar a warning, what kind of disciplinary action should you take against Kumar if his behaviour persists?",
+    "situationSpeech": "Kumar and I are scheduled for the same warehouse shift. Kumar regularly plays games on his cell phone while I take inventory. I have to do the bulk of the work while he plays. I've asked him on four different occasions to help me, but he doesn't listen to me.",
+    "bannerImg": "images/ui/banner/fire.jpg",
+    "options": [
+      "Send Kumar a notification of termination as he is hampering warehouse productivity",
+      "Reprimand Kumar in the morning meeting so as to discourage others from behaving this way too",
+      "Have Kumar report his productivity numbers to you or a team leader at the end of every shift"
+    ],
+    "reactions": [{
+      "correct": false,
+      "text": "You picked the wrong choice. You chose to send Kumar a notification of termination without giving him a chance to change his behaviour. In such a situation, you should try to engage the employee in a meaningful conversation about his behaviour and allow him to take responsibility. In his way you will be able to cultivate a more trusting relationship with the employee in which he feels supported. ",
+      "image": "images/conflict/kumar-1.svg"
+    }, {
+      "correct": false,
+      "text": "You picked the wrong choice. You chose to reprimand Kumar in front of other employees in a morning meeting. In such a situation you should try to engage the employee in a meaningful private conversation about his behaviour and allow him to take responsibility. Reprimanding an employee publicly will lower the chances of affecting change or building trust in the employees. ",
+      "image": "images/conflict/kumar-2.svg"
+    }, {
+      "correct": true,
+      "text": "You picked the right choice. You chose to have Kumar report his productivity numbers to you or a team leader at the end of every shift. In this way you allowed the employee a chance to take responsibility and become more professional. ",
+      "image": "images/conflict/kumar-3.svg"
+    }]
+  }
+}, {
+  "position": [1458, 650],
+  "type": "conflict",
+  "header": "Stacker overflow",
+  "content": {
+    "situationImg": "images/conflict/stacker.svg",
+    "description": "The SLC has only one MHE stacker, and so there is conflict between the two teams as to who gets priority. What should you do in such a case?",
+    "situationSpeech": "Sir, the guys from warehouse B keep using the MHE stacker. We need this for our accuracy check.",
+    "options": [
+      "Allocate the MHE based upon load and priority of both customer operations",
+      "Allow the two teams to work out a compromise between themselves",
+      "Give priority to the customer that brings in greater business",
+      "Ask your management to buy another MHE stacker to work more efficiently"
+    ],
+    "reactions": [{
+      "correct": true,
+      "text": "That’s correct. You should allocate the MHE based upon load and priority of both customer operations.",
+      "image": "images/conflict/stacker.svg"
+    }, {
+      "correct": false,
+      "text": "That’s incorrect. You should allocate the MHE based upon load and priority of both customer operations.",
+      "image": "images/conflict/stacker.svg"
+    }, {
+      "correct": false,
+      "text": "That’s incorrect. You should allocate the MHE based upon load and priority of both customer operations.",
+      "image": "images/conflict/stacker.svg"
+    }, {
+      "correct": false,
+      "text": "That’s incorrect. You should allocate the MHE based upon load and priority of both customer operations.",
+      "image": "images/conflict/stacker.svg"
+    }]
+  }
+}, {
+  "position": [2135, 1039],
+  "type": "conflict",
+  "header": "Inbound for efficiency",
+  "content": {
+    "situationImg": "images/conflict/inbound-0.svg",
+    "description": "They are stating that they are paid wages and will only do work load assigned. What should you do?",
+    "situationSpeech": "Inbound teams regularly complete their targets for the day by 4 p.m. but do not move on to help the outbound teams. ",
+    "situationBalloonClass": "balloon-15",
+    "options": [
+      "Move a few people from the inbound team to the outbound team to balance the work load",
+      "Encourage teams to collaborate and deliver operations excellence to the customer",
+      "Hire more people to help out the outbound team so that they can also finish work earlier",
+      "Lay off some people from the inbound team as they don't need that"
+    ],
+    "reactions": [{
+      "correct": false,
+      "text": "That’s incorrect. You should encourage teams to collaborate to deliver operations excellence to the customers.",
+      "image": "images/conflict/inbound-1.svg"
+    }, {
+      "correct": true,
+      "text": "That’s correct. You should encourage teams to collaborate to deliver operations excellence to the customers.",
+      "image": "images/conflict/inbound-1.svg"
+    }, {
+      "correct": false,
+      "text": "That’s incorrect. You should encourage teams to collaborate to deliver operations excellence to the customers.",
+      "image": "images/conflict/inbound-1.svg"
+    }, {
+      "correct": false,
+      "text": "That’s incorrect. You should encourage teams to collaborate to deliver operations excellence to the customers.",
+      "image": "images/conflict/inbound-1.svg"
+    }]
+  }
+}]
+
+
