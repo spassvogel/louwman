@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/louwman/static/css/main.fbba1791.chunk.css",
+    "main.js": "/louwman/static/js/main.676ebb40.chunk.js",
+    "main.js.map": "/louwman/static/js/main.676ebb40.chunk.js.map",
+    "runtime-main.js": "/louwman/static/js/runtime-main.79c9a56e.js",
+    "runtime-main.js.map": "/louwman/static/js/runtime-main.79c9a56e.js.map",
+    "static/js/2.1145baad.chunk.js": "/louwman/static/js/2.1145baad.chunk.js",
+    "static/js/2.1145baad.chunk.js.map": "/louwman/static/js/2.1145baad.chunk.js.map",
+    "index.html": "/louwman/index.html",
+    "precache-manifest.cca669acc814627d49c7b98e1601c1dc.js": "/louwman/precache-manifest.cca669acc814627d49c7b98e1601c1dc.js",
+    "service-worker.js": "/louwman/service-worker.js",
+    "static/css/main.fbba1791.chunk.css.map": "/louwman/static/css/main.fbba1791.chunk.css.map",
+    "static/js/2.1145baad.chunk.js.LICENSE.txt": "/louwman/static/js/2.1145baad.chunk.js.LICENSE.txt",
+    "static/media/check.81786b3c.svg": "/louwman/static/media/check.81786b3c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.79c9a56e.js",
+    "static/js/2.1145baad.chunk.js",
+    "static/css/main.fbba1791.chunk.css",
+    "static/js/main.676ebb40.chunk.js"
+  ]
+}
