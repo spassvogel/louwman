@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactModal from 'react-modal';
 import './modal.css';
-import { AnyContent, ContentType, YoutubeContent, OptionsContent, IframeContent, ConflictContent } from '../../common/constants';
+import { AnyContent, ContentType, YoutubeContent, OptionsContent, IframeContent, ConflictContent, TextContent } from '../../common/constants';
 import YoutubeModalContent from './YoutubeModalContent';
 import OptionsModalContent from './OptionsModalContent';
 import IframeModalContent from './IFrameModalContent';
 import ConflictModalContent from './ConflictModalContent';
+import TextModalContent from './TextModalContent';
 
 interface Props {
   content: AnyContent;
@@ -31,6 +32,8 @@ const ContentModal = (props: Props) => {
         return <IframeModalContent content={content.content as IframeContent} />;
       case ContentType.conflict: 
         return <ConflictModalContent content={content.content as ConflictContent} setCorrectAnswer={setCorrectAnswer} selectedAnswer={selectedAnswer} />;
+      case ContentType.text: 
+        return <TextModalContent content={content.content as TextContent} />;
     }
   }
 

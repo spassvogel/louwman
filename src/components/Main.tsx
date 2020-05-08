@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useMemo } from "react";
 import { Viewport as PixiViewport } from "pixi-viewport";
-import { AnyContent } from "../common/constants";
+import { AnyContent, IContent, TextContent, ContentType } from "../common/constants";
 import sound from 'pixi-sound';
 import Marker from "./pixi/Marker";
 import { Stage, Sprite } from "@inlet/react-pixi";
@@ -24,14 +24,35 @@ interface Props {
   content: AnyContent[];
 }
 
+const items:{ [name:string]: IContent<TextContent> } = {
+  forklift: {
+    position: [2539, 868],
+    type: ContentType.text,
+    header: "Heftruck staat nog met de lepels omhoog",
+    content: {
+      image: "forklift-spoons-up.png",
+      text: "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections",
+    }
+  },
+  pool: {
+    position: [1659, 1296],
+    type: ContentType.text,
+    header: "Plas met vloeistof op de vloer",
+    content: {
+      image: "pool.png",
+      text: "The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. ",
+    }
+  }
+}
+
 const Main = (props: Props) => {
   const { content } = props;
   const viewportRef = useRef<PixiViewport>(null);
   const [selectedSituation, setSelectedSituation] = useState<number | null>(null);
   const [answers, setAnswers] = useState<number[]>([]);
 
-  const worldWidth = 3497;
-  const worldHeight = 1419;
+  const worldWidth = 5487;
+  const worldHeight = 2707;
   //const scaleFactor = 1.86875; //scaled the original map up
 
   const [canvasWidth, setCanvasWidth] = useState(1200);
@@ -71,19 +92,19 @@ const Main = (props: Props) => {
     }
   }, [selectedSituation]);
 
-  useEffect(() => {
-    sound.add('plops', {
-      url: `${process.env.PUBLIC_URL}/sound/plops.wav`,
-      autoPlay: true,
-    });    
-  }, []);
+  // useEffect(() => {
+  //   sound.add('plops', {
+  //     url: `${process.env.PUBLIC_URL}/sound/plops.wav`,
+  //     autoPlay: true,
+  //   });    
+  // }, []);
 
   const handleMarkerClick = (content: AnyContent, index: number) => {
     setSelectedSituation(index);
   }
 
   const handleClose = () => {
-    setSelectedSituation(null);
+    setItem(null);
   }
 
   const handleCorrectAnswer = (answer: number) => {
@@ -116,26 +137,28 @@ const Main = (props: Props) => {
     ); 
   }
 
+  const [item, setItem] = useState<string|null>(null);
+
   return (
     <>
       <Stage width={canvasWidth} height={canvasHeight} options={{transparent: true}} >
       <Viewport screenWidth={canvasWidth} screenHeight={canvasHeight} worldWidth={worldWidth} worldHeight={worldHeight} ref={viewportRef} >
-        <Sprite image={`${process.env.PUBLIC_URL}/images/map/warehouse-back.png`} >
-          <BigRacks x={1153} y={207} />
-          <Sprite image={`${process.env.PUBLIC_URL}/images/map/safe.png`} x={2086} y={296} />
-          <Sprite image={`${process.env.PUBLIC_URL}/images/map/middle.png`} x={806} y={334} />
-
-          <Conveyor name={"Conveyor"} x={269} y={498} />
-          <Sprite image={`${process.env.PUBLIC_URL}/images/map/packing.png`} x={995} y={848} name="packing-table"/>
-
-          <Sprite image={`${process.env.PUBLIC_URL}/images/map/warehouse-front-wall.png`} y={705} name="front-wall"/>
-          {content.map((contentItem, index) => renderMarker(contentItem, index))}
+        <Sprite image={`${process.env.PUBLIC_URL}/images/map/zalmweg.png`} >
+          {Object.keys(items).map((i) => 
+            <Sprite 
+              image={`${process.env.PUBLIC_URL}/images/map/${items[i].content.image}`} 
+              position={items[i].position} 
+              key={i} 
+              interactive 
+              pointerdown={() => setItem(i)} 
+            />
+          )}
         </Sprite>
       </Viewport>
     </Stage>
-    { selectedContent && (
+    { item && (
       <ContentModal 
-        content={selectedContent} 
+        content={items[item] as AnyContent} 
         onClose={handleClose} 
         setCorrectAnswer={handleCorrectAnswer}
         selectedAnswer={(answers[selectedSituation!])}
